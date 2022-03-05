@@ -8,6 +8,8 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductShowCaseComponent } from './components/product-show-case/product-show-case.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card'; 
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ProductShowCaseComponent } from './components/product-show-case/product
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
