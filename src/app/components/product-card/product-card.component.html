@@ -1,8 +1,21 @@
-<mat-card>
-  <mat-card-title>Actions Buttons</mat-card-title>
-  <mat-card-subtitle>End</mat-card-subtitle>
-  <mat-card-actions align="end">
-    <button mat-button>Like</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
-</mat-card>
+<div class="wrapper">
+  <mat-card *ngFor="let x of exampleProductList" class="card-item">
+    <mat-card-title>{{ x.title }}</mat-card-title>
+    <mat-card-subtitle>{{ x.description }}</mat-card-subtitle>
+    <mat-card-actions class="button-container" align="end">
+      <button
+        mat-icon-button
+        color="warn"
+        aria-label="Example icon button with a heart icon"
+      >
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        aria-label="Example icon button with a vertical three dot icon"
+      >
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
