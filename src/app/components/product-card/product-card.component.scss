@@ -1,11 +1,20 @@
+@import './../../../helpers.scss';
+
 .wrapper{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 8px 8px 0 8px;
     .card-item{
+        justify-self: center;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        max-width: 200px;
-        height: 400px;
+        height: 300px;
+        margin: 0 0 8px 0;
+        transition: all .2s;
+    }
+    .card-item:hover{
+         transform: scale(1.02)
     }
 }
