@@ -1,1 +1,24 @@
-<header></header>
+<header>
+  <button
+    class="menu-button"
+    mat-icon-button
+    color="basic"
+    [matMenuTriggerFor]="menu"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>login</mat-icon>
+      <span>Log-in</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>shopping_cart</mat-icon>
+      <span>Checkout</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>help_center</mat-icon>
+      <span>Help</span>
+    </button>
+  </mat-menu>
+</header>

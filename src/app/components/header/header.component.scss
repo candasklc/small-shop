@@ -1,7 +1,18 @@
 @import '../../../helpers.scss';
 
 header{
-    height: 20vh;
+    height: 10vh;
     width: 100%;
     background-color: $mid-black;
+    display: grid;
+    .logo{
+        justify-self: start;
+        margin-left: $white-space;
+    }
+    .menu-button{
+        margin-right: $white-space;
+        justify-self: end;
+        align-self: center;
+        background-color: whitesmoke;
+    }
 }

@@ -4,14 +4,14 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 8px 8px 0 8px;
+    padding: $white-space $white-space 0 $white-space;
     .card-item{
         justify-self: center;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 300px;
-        margin: 0 0 8px 0;
+        margin: 0 0 $white-space 0;
         transition: all .2s;
     }
     .card-item:hover{
