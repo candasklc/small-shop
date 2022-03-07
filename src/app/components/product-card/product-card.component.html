@@ -1,20 +1,16 @@
 <div class="wrapper">
   <mat-card *ngFor="let x of products" class="card-item">
-    <mat-card-title>{{ x.title }}</mat-card-title>
+    <div class="title-container">
+      <mat-card-title>{{ x.title }}</mat-card-title>
+      <mat-icon>more_vert</mat-icon>
+    </div>
     <mat-card-subtitle>{{ x.description }}</mat-card-subtitle>
     <mat-card-actions class="button-container" align="end">
-      <button
-        mat-icon-button
-        color="warn"
-        aria-label="Example icon button with a heart icon"
-      >
+      <button mat-icon-button color="warn">
         <mat-icon>favorite</mat-icon>
       </button>
-      <button
-        mat-icon-button
-        aria-label="Example icon button with a vertical three dot icon"
-      >
-        <mat-icon>more_vert</mat-icon>
+      <button mat-icon-button>
+        <mat-icon>add_shopping_cart</mat-icon>
       </button>
     </mat-card-actions>
   </mat-card>

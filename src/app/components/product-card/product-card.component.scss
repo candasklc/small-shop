@@ -1,20 +1,24 @@
-@import './../../../helpers.scss';
+@import "./../../../helpers.scss";
 
-.wrapper{
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: $white-space $white-space 0 $white-space;
+  .card-item {
+    justify-self: center;
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding: $white-space $white-space 0 $white-space;
-    .card-item{
-        justify-self: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 300px;
-        margin: 0 0 $white-space 0;
-        transition: all .2s;
-    }
-    .card-item:hover{
-         transform: scale(1.02)
-    }
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    margin: 0 0 $white-space 0;
+    transition: all 0.2s;
+  }
+  .card-item:hover {
+    transform: scale(1.02);
+  }
+  .title-container {
+    display: flex;
+    justify-content: space-between;
+  }
 }
