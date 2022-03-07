@@ -9,10 +9,13 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductShowCaseComponent } from './components/product-show-case/product-show-case.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCardModule } from '@angular/material/card'; 
-import { MatIconModule } from '@angular/material/icon'; 
-import { MatButtonModule } from '@angular/material/button'; 
-import { MatMenuModule } from '@angular/material/menu'; 
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { MatListModule } from '@angular/material/list';
+import { FavouritesComponent } from './components/favourites/favourites.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,9 @@ import { MatMenuModule } from '@angular/material/menu';
     ProductCardComponent,
     HeaderComponent,
     FooterComponent,
-    ProductShowCaseComponent
+    ProductShowCaseComponent,
+    ShoppingCartComponent,
+    FavouritesComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +36,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

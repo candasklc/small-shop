@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { ProductModel } from 'src/app/models/product/product-model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  public exampleProductList: ProductModel[] = [
+  public productList: ProductModel[] = [
     {
       id: 1,
       title: 'Product Title',
@@ -71,7 +70,7 @@ export class ProductService {
 
   constructor() { }
 
-  getProducts(): ProductModel[]{
-    return this.exampleProductList;
+  getProducts(): ProductModel[] {
+    return this.productList;
   }
 }

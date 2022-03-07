@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductModel } from 'src/app/models/product/product-model';
+import { FavouritesService } from 'src/app/services/favourites.service';
 import { ProductService } from 'src/app/services/products.service';
 
 @Component({
@@ -10,14 +11,14 @@ import { ProductService } from 'src/app/services/products.service';
 export class ProductShowCaseComponent implements OnInit {
   public products: ProductModel[] = [];
   constructor(
-    private dataService: ProductService,
+    private productService: ProductService,
   ) { }
 
   ngOnInit(): void {
     this.getProducts();
   }
 
-  getProducts():void {
-    this.products = this.dataService.getProducts();
+  getProducts(): void {
+    this.products = this.productService.getProducts();
   }
 }

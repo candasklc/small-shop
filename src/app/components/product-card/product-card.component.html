@@ -6,7 +6,7 @@
     </div>
     <mat-card-subtitle>{{ x.description }}</mat-card-subtitle>
     <mat-card-actions class="button-container" align="end">
-      <button mat-icon-button color="warn">
+      <button mat-icon-button color="warn" (click)="addFavourite(x)">
         <mat-icon>favorite</mat-icon>
       </button>
       <button mat-icon-button>
