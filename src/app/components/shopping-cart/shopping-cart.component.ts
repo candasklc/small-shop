@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ProductModel } from 'src/app/models/product/product-model';
-import { FavouritesService } from 'src/app/services/favourites.service';
-import { ProductService } from 'src/app/services/products.service';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -11,13 +10,18 @@ import { ProductService } from 'src/app/services/products.service';
 export class ShoppingCartComponent implements OnInit {
   public shoppingCart: ProductModel[] = []
   constructor(
-    private favourites: FavouritesService
+    private cartService: CartService
   ) { }
 
   ngOnInit(): void {
-  }
-  getItems(): void {
-    this.favourites.getFavourites();
+    this.getItems();
   }
 
+  getItems(): void {
+    this.shoppingCart = this.cartService.getItems();
+  }
+
+  deleteFromCart(item: ProductModel): void {
+    this.cartService.deleteItemFromCart(item);
+  }
 }

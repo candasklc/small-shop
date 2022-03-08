@@ -2,5 +2,7 @@ export interface ProductModel {
     id: number,
     title: string,
     count: number,
-    description: string
+    description: string,
+    isFavourite: boolean,
+    isInCart: boolean
 }

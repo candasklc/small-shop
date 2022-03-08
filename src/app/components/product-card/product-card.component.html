@@ -6,10 +6,20 @@
     </div>
     <mat-card-subtitle>{{ x.description }}</mat-card-subtitle>
     <mat-card-actions class="button-container" align="end">
-      <button mat-icon-button color="warn" (click)="addFavourite(x)">
-        <mat-icon>favorite</mat-icon>
+      <button
+        mat-icon-button
+        [color]="x.isFavourite === false ? 'color' : 'warn'"
+        (click)="addFavourite(x)"
+      >
+        <mat-icon *ngIf="x.isFavourite === false">favorite_border</mat-icon>
+        <mat-icon *ngIf="x.isFavourite">favorite</mat-icon>
       </button>
-      <button mat-icon-button>
+      <button
+        mat-icon-button
+        style="background-color: rgb(199, 199, 199)"
+        [color]="x.isInCart === false ? 'color' : 'accent'"
+        (click)="addToCart(x)"
+      >
         <mat-icon>add_shopping_cart</mat-icon>
       </button>
     </mat-card-actions>

@@ -2,8 +2,8 @@
   <mat-list role="list" *ngFor="let x of favourites">
     <mat-list-item role="listitem">
       {{ x.title }}
-      <button mat-icon-button (click)="deleteFavourite(x)">
-        <mat-icon class="material-icons-outlined">delete</mat-icon>
+      <button color="warn" mat-icon-button (click)="deleteFavourite(x)">
+        <mat-icon class="material-icons">clear</mat-icon>
       </button>
     </mat-list-item>
   </mat-list>

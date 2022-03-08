@@ -1,6 +1,12 @@
 <div class="wrapper">
   <mat-list role="list" *ngFor="let x of shoppingCart">
-    <mat-list-item role="listitem">{{ x.title }}</mat-list-item>
+    <mat-list-item role="listitem"
+      >{{ x.title }}
+      <button color="warn" mat-icon-button (click)="deleteFromCart(x)">
+        <mat-icon class="material-icons">clear</mat-icon>
+      </button>
+    </mat-list-item>
   </mat-list>
+  <hr />
   <app-favourites></app-favourites>
 </div>

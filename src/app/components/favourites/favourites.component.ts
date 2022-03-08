@@ -19,11 +19,9 @@ export class FavouritesComponent implements OnInit {
   }
   deleteFavourite(item: ProductModel): void {
     this.favourites = this.dataService.deleteFavourite(item);
-    console.log(this.favourites);
   }
 
   getFavouritesList(): void {
     this.favourites = this.dataService.getFavourites();
-    console.log(this.favourites);
   }
 }
