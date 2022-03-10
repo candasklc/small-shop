@@ -1,0 +1,39 @@
+@use "@angular/material" as mat;
+@import "~@angular/material/prebuilt-themes/indigo-pink.css"; // This solved the component ui problems (Borders ext.)
+@include mat.core();
+
+// ========= General Theming =========
+$custom-primary: mat.define-palette(mat.$teal-palette, 600);
+$custom-accent: mat.define-palette(mat.$blue-gray-palette, 600);
+$custom-warn: mat.define-palette(mat.$red-palette, 700);
+
+$custom-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $custom-primary,
+      accent: $custom-accent,
+      warn: $custom-warn,
+    ),
+  )
+);
+// Emit theme-dependent styles for common features used across multiple components.
+@include mat.core-theme($custom-theme);
+
+// ========= Button Theming =========
+$custom-button-primary: mat.define-palette(mat.$green-palette, 400);
+$custom-button-accent: mat.define-palette(mat.$blue-gray-palette, 400);
+$custom-button-warn: mat.define-palette(mat.$red-palette, 600);
+
+$custom-button-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $custom-button-primary,
+      accent: $custom-button-accent,
+      warn: $custom-button-warn,
+    ),
+  )
+);
+
+// Emit styles for MatButton based on `$custom-button-theme`. Because the configuration
+// passed to `define-light-theme` omits typography, `button-theme` will not emit any typography styles.
+@include mat.button-theme($custom-button-theme);
