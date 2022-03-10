@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { ProductModel } from 'src/app/models/product/product-model';
+import { products } from 'src/assets/products';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FavouritesService {
-  public favouritesList: ProductModel[] = [
-  ]
+  public favouritesList: ProductModel[] = products.filter((item) => { return item.isFavourite === true });
 
   constructor() { }
 

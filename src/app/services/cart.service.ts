@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { ProductModel } from 'src/app/models/product/product-model';
+import { products } from 'src/assets/products';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
-  public productsInCart: ProductModel[] = [
-  ]
+  public productsInCart: ProductModel[] = products.filter((item) => { return item.isInCart === true });
 
   constructor() { }
 
