@@ -23,7 +23,6 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   deleteFromCart(item: ProductModel): void {
-    this.shoppingCart = this.cartService.deleteItemFromCart(item);
-
+    this.shoppingCart = [...this.cartService.deleteItemFromCart(item)];
   }
 }

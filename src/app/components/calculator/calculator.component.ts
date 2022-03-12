@@ -13,7 +13,7 @@ export class CalculatorComponent implements OnChanges {
   constructor() { }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes)
+    this.calculate();
   }
 
   public calculate(): void {
