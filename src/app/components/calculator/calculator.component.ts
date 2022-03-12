@@ -8,7 +8,9 @@ import { ProductModel } from 'src/app/models/product/product-model';
 })
 export class CalculatorComponent implements OnChanges {
   @Input() shoppingCart: ProductModel[] = [];
+  public columnsToDisplay = ['prices'];
   public total: number = 0;
+  public amountOfItems = 0;
 
   constructor() { }
 
@@ -18,6 +20,7 @@ export class CalculatorComponent implements OnChanges {
 
   public calculate(): void {
     this.total = this.shoppingCart.map(item => item.price).reduce((prev, curr) => prev + curr, 0);
+    this.amountOfItems = this.shoppingCart.length;
   }
 }
 

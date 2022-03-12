@@ -9,6 +9,7 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class ShoppingCartComponent implements OnInit {
   public shoppingCart: ProductModel[] = [];
+  public columnsToDisplay = ['items', 'price'];
 
   constructor(
     private cartService: CartService

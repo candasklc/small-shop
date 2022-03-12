@@ -2,12 +2,9 @@
 
 .wrapper {
   padding: $white-space;
-  .list-item {
-    display: flex;
-    max-width: 400px;
-    align-items: center;
-    button {
-      margin-left: auto;
+  .cart-container {
+    table {
+      width: 100%;
     }
   }
 }
