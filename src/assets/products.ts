@@ -6,6 +6,7 @@ export const products: ProductModel[] = [
         id: 1,
         title: 'Product Title',
         count: Math.floor(Math.random() * 40),
+        price: Math.floor(Math.random() * 1000),
         description: 'This section describes the product.',
         isFavourite: true,
         isInCart: false
@@ -14,6 +15,7 @@ export const products: ProductModel[] = [
         id: 2,
         title: 'Product Title',
         count: Math.floor(Math.random() * 40),
+        price: Math.floor(Math.random() * 1000),
         description: 'This section describes the product.',
         isFavourite: false,
         isInCart: false
@@ -22,6 +24,7 @@ export const products: ProductModel[] = [
         id: 3,
         title: 'Product Title',
         count: Math.floor(Math.random() * 40),
+        price: Math.floor(Math.random() * 1000),
         description: 'This section describes the product.',
         isFavourite: true,
         isInCart: false
@@ -30,6 +33,7 @@ export const products: ProductModel[] = [
         id: 4,
         title: 'Product Title',
         count: Math.floor(Math.random() * 40),
+        price: Math.floor(Math.random() * 1000),
         description: 'This section describes the product.',
         isFavourite: false,
         isInCart: false
@@ -38,6 +42,7 @@ export const products: ProductModel[] = [
         id: 5,
         title: 'Product Title',
         count: Math.floor(Math.random() * 40),
+        price: Math.floor(Math.random() * 1000),
         description: 'This section describes the product.',
         isFavourite: false,
         isInCart: true
@@ -46,6 +51,7 @@ export const products: ProductModel[] = [
         id: 6,
         title: 'Product Title',
         count: Math.floor(Math.random() * 40),
+        price: Math.floor(Math.random() * 1000),
         description: 'This section describes the product.',
         isFavourite: false,
         isInCart: true
@@ -54,6 +60,7 @@ export const products: ProductModel[] = [
         id: 7,
         title: 'Product Title',
         count: Math.floor(Math.random() * 40),
+        price: Math.floor(Math.random() * 1000),
         description: 'This section describes the product.',
         isFavourite: false,
         isInCart: false
@@ -62,6 +69,7 @@ export const products: ProductModel[] = [
         id: 8,
         title: 'Product Title',
         count: Math.floor(Math.random() * 40),
+        price: Math.floor(Math.random() * 1000),
         description: 'This section describes the product.',
         isFavourite: false,
         isInCart: false
@@ -70,6 +78,7 @@ export const products: ProductModel[] = [
         id: 9,
         title: 'Product Title',
         count: Math.floor(Math.random() * 40),
+        price: Math.floor(Math.random() * 1000),
         description: 'This section describes the product.',
         isFavourite: true,
         isInCart: false
@@ -78,8 +87,27 @@ export const products: ProductModel[] = [
         id: 10,
         title: 'Product Title',
         count: Math.floor(Math.random() * 40),
+        price: Math.floor(Math.random() * 1000),
         description: 'This section describes the product.',
         isFavourite: false,
         isInCart: true
+    },
+    {
+        id: 11,
+        title: 'Product Title',
+        count: Math.floor(Math.random() * 40),
+        price: Math.floor(Math.random() * 1000),
+        description: 'This section describes the product.',
+        isFavourite: false,
+        isInCart: false
+    },
+    {
+        id: 12,
+        title: 'Product Title',
+        count: Math.floor(Math.random() * 40),
+        price: Math.floor(Math.random() * 1000),
+        description: 'This section describes the product.',
+        isFavourite: false,
+        isInCart: false
     },
 ]

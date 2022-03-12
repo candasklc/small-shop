@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter } from '@angular/core';
 import { ProductModel } from 'src/app/models/product/product-model';
 import { CartService } from 'src/app/services/cart.service';
 
@@ -8,7 +8,8 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./shopping-cart.component.scss']
 })
 export class ShoppingCartComponent implements OnInit {
-  public shoppingCart: ProductModel[] = []
+  public shoppingCart: ProductModel[] = [];
+
   constructor(
     private cartService: CartService
   ) { }
@@ -22,6 +23,7 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   deleteFromCart(item: ProductModel): void {
-    this.cartService.deleteItemFromCart(item);
+    this.shoppingCart = this.cartService.deleteItemFromCart(item);
+
   }
 }

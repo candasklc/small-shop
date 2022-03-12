@@ -1,13 +1,14 @@
 <div class="wrapper">
-  <h1>In Cart</h1>
-  <mat-list role="list" *ngFor="let x of shoppingCart">
-    <mat-list-item role="listitem"
-      >{{ x.title }}
+  <div class="cart-container">
+    <h1>In Cart</h1>
+    <mat-card class="list-item" *ngFor="let x of shoppingCart">
+      <div class="list-title">{{ x.title }}</div>
       <button color="warn" mat-icon-button (click)="deleteFromCart(x)">
         <mat-icon class="material-icons">clear</mat-icon>
       </button>
-    </mat-list-item>
-  </mat-list>
+    </mat-card>
+    <app-calculator [shoppingCart]="shoppingCart"></app-calculator>
+  </div>
   <hr />
   <app-favourites></app-favourites>
 </div>

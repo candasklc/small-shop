@@ -16,6 +16,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { MatListModule } from '@angular/material/list';
 import { FavouritesComponent } from './components/favourites/favourites.component';
+import { CalculatorComponent } from './components/calculator/calculator.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FavouritesComponent } from './components/favourites/favourites.componen
     FooterComponent,
     ProductShowCaseComponent,
     ShoppingCartComponent,
-    FavouritesComponent
+    FavouritesComponent,
+    CalculatorComponent
   ],
   imports: [
     BrowserModule,
