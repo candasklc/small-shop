@@ -1,33 +1,48 @@
 <div class="wrapper">
   <div class="cart-container">
-    <h1>In Cart</h1>
+    <h1>Cart</h1>
+    <mat-card class="empty-cart" *ngIf="isTotalAmountZero">
+      <img
+        src="../../../assets/shopping_cart_black_48dp.svg"
+        alt="shopping-cart"
+      />
+      <h1>nothing is here</h1>
+    </mat-card>
     <table
       mat-table
       [dataSource]="shoppingCart"
       class="mat-elevation-z8 demo-table"
+      *ngIf="!isTotalAmountZero"
     >
-      <ng-container matColumnDef="items" class="item-titles">
-        <th mat-header-cell *matHeaderCellDef>item</th>
+      <ng-container matColumnDef="buttons" class="item-titles">
+        <th mat-header-cell *matHeaderCellDef></th>
         <td mat-cell *matCellDef="let x">
-          <button color="warn" mat-icon-button (click)="deleteFromCart(x)">
-            <mat-icon class="material-icons">clear</mat-icon>
+          <button mat-raised-button (click)="deleteFromCart(x)">
+            <mat-icon class="material-icons">delete</mat-icon>
           </button>
-          {{ x.title }}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="items" class="item-titles">
+        <th mat-header-cell *matHeaderCellDef><h3>item</h3></th>
+        <td mat-cell *matCellDef="let x">
+          <h3>{{ x.title }}</h3>
         </td>
       </ng-container>
       <ng-container matColumnDef="price">
-        <th mat-header-cell *matHeaderCellDef>price</th>
+        <th mat-header-cell *matHeaderCellDef><h3>price</h3></th>
         <td mat-cell *matCellDef="let x">
-          {{ x.price }}
+          <h3>{{ x.price }}</h3>
         </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
       <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
     </table>
-
-    <app-calculator [shoppingCart]="shoppingCart"></app-calculator>
+    <mat-card class="total-container" *ngIf="!isTotalAmountZero">
+      <h3>total amount: {{ total }}</h3>
+      <button class="check-out" mat-raised-button color="primary">
+        Check-out
+      </button>
+    </mat-card>
   </div>
-  <hr />
-  <app-favourites></app-favourites>
 </div>

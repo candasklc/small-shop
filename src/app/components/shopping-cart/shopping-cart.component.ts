@@ -9,7 +9,10 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class ShoppingCartComponent implements OnInit {
   public shoppingCart: ProductModel[] = [];
-  public columnsToDisplay = ['items', 'price'];
+  public columnsToDisplay = ['buttons', 'items', 'price'];
+  public total: number = 0;
+  public amountOfItems = 0;
+  public isTotalAmountZero = false;
 
   constructor(
     private cartService: CartService
@@ -19,11 +22,21 @@ export class ShoppingCartComponent implements OnInit {
     this.getItems();
   }
 
-  getItems(): void {
+  private getItems(): void {
     this.shoppingCart = this.cartService.getItems();
+    this.calculate();
   }
 
-  deleteFromCart(item: ProductModel): void {
+  public deleteFromCart(item: ProductModel): void {
     this.shoppingCart = [...this.cartService.deleteItemFromCart(item)];
+    this.calculate();
+  }
+
+  public calculate(): void {
+    this.total = this.shoppingCart.map(item => item.price).reduce((prev, curr) => prev + curr, 0);
+    this.amountOfItems = this.shoppingCart.length;
+    if (this.amountOfItems === 0) {
+      this.isTotalAmountZero = true;
+    }
   }
 }

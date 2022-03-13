@@ -1,10 +1,33 @@
 @import "./../../../helpers.scss";
 
 .wrapper {
+  display: flex;
+  justify-content: center;
   padding: $white-space;
   .cart-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
     table {
       width: 100%;
+    }
+    .empty-cart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .total-container {
+      margin-top: $white-space;
+      align-self: flex-end;
+      display: grid;
+      min-width: 50%;
+      h3 {
+        text-align: center;
+      }
+      .check-out {
+        color: whitesmoke;
+      }
     }
   }
 }
